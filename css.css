@@ -1,0 +1,118 @@
+body{
+    font-family: 'Pacifico', cursive;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+140deg
+, #15246a 0%, #555552 50%,#a9558f 75%)
+}
+
+#main {
+    display: none;
+    
+}   
+
+.intro {
+    display: block;
+    background:url(./img/hinh-nen-4k-tuyet-dep-cho-may-tinh.jpg) center /cover;
+    /* opacity: 0.95; */
+    width:100%;
+    height: 100vh;
+    z-index: 1;
+    transition: 3s;
+}
+
+.divBtn {
+    padding: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    position: absolute;
+    top: 10.9vh;
+    right: 27.1%;
+    height: 200px;
+    width: 200px;
+    border-radius: 55%;
+    cursor:pointer
+
+}
+
+.playAgain {
+    display: none;
+}
+
+a {
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.divBtn:hover  {
+       color: #2400b2;
+
+    transition: 3s;
+}
+
+
+.card{
+    height: 440px;
+    width: 300px;
+    position: relative;
+    margin: 0 48px;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Lobster', cursive;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.front{
+    /* background: linear-gradient(#08aeea, #2af598); */
+    background:url(./img/2.jpg) center ;
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.back{
+    background: rgb(79, 77, 77);
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+
+#vid-vinh {
+    width: 100%;
+    height: 100%;
+}
+
+.c2 .back {
+    background: url(./img/vananh.jpg) center/cover;
+}
+
+/* .card:active {
+    transform: rotateY(180deg);
+}
+.card:visited {
+    transform: rotateY(180deg);
+} */
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    
+    perspective: 1000px;
+}
