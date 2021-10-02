@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Card</title>
+    <link rel="icon" href="./img/va2.jpg">
+    <link rel="stylesheet" href="css.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="intro">
+         <div class="divBtn">
+            Play
+        </div>
+    </div>
+    <div class="playAgain">
+        <a href="./index.html">Play again</a>
+    </div>
+    <div id="main">
+        
+        <div class="container">
+            <div class="card c1">
+                <div class="front"></div>
+                <div class="back">
+                    <video id="vid-vinh" src="./img/video-1632652547.mp4" ></video>
+                </div>
+            </div>
+
+            <div class="card c2" >
+                <div class="front"></div>
+                <div class="back" ></div>
+            </div>
+        </div>
+        
+       
+
+    </div>
+    
+        
+
+
+
+    <script >
+        
+        function start () {
+            
+            var model =document.querySelector('.intro')
+            var cont =document.querySelector('#main')
+            var but=document.querySelector('.divBtn') 
+            var pA=document.querySelector('.playAgain')
+
+            but.onclick=function () {
+                model.style.display='none'
+                cont.style.display='block'
+                pA.style.display='block'
+            }
+            function op_Open(op) {
+                var temp = document.querySelector(op)
+                    temp.onclick = function () {
+                       
+                        temp.style.transform=' rotateY(180deg)'; 
+                    }
+                if(op === '.c1') {  
+                   var vid = document.querySelector('#vid-vinh')
+                   vid.controls='controls'
+                   vid.autoplay='autoplay' 
+                   vid.loop='loop'
+                }
+            }
+            op_Open('.c1')
+            op_Open('.c2')
+        }
+
+        start()
+
+    </script>
+</body>
+</html>
